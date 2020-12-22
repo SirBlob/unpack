@@ -80,7 +80,7 @@ echo "Please enter the compressed file to unpack"
 read -p "Compressed File Name: " filename
 
 unpack
-if [ $? != 0 ] ; #or test directly the command as in a bigger script the last return code might not be related to the correct function
+if [ $? != 0 ] ; #Can be changed just if unpack to be safer about return code
 then 
 	printf -- '-%.0s' {1..100}; echo ""
 	echo "Something went wrong with the extraction"
